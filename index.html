@@ -86,6 +86,10 @@
   body.modern .modern-wrap > .m-border-art { position: fixed; z-index: 0; }
   body.modern .modern-wrap > .m-nav { position: sticky; z-index: 100; }
 
+  a {
+    color: var(--maroon-light);
+  }
+
   /* SVG border art */
   .m-border-art {
     position: fixed;
@@ -1784,7 +1788,8 @@
     .m-border-art { display: none; }
     body.modern .modern-wrap::before { display: none; }
     body.modern .modern-wrap::after { display: none; }
-    .mode-toggle { top: 68px; right: 16px; }
+    body.modern .mode-toggle { top: 54px; }
+    .mode-toggle { right: 16px; }
 
     .m-nav { padding: 0 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
     .m-nav::-webkit-scrollbar { display: none; }
@@ -1862,17 +1867,19 @@
   /* ===== RESPONSIVE — PHONE (max-width: 480px) ===== */
   /* ============================================================ */
   @media (max-width: 480px) {
+    body.modern .mode-toggle { top: 48px; }
+
     .m-hero-name { font-size: 44px; }
     .m-hero-links { flex-direction: column; gap: 10px; }
     .m-hero-link-btn, .m-hero-link-outline { text-align: center; }
     .m-hero-bio { font-size: 15px; padding: 20px; }
-
+    
     .m-section { padding: 48px 16px; }
     .m-section-title { font-size: 32px; }
     .m-tl-company { font-size: 22px; }
     .m-project-card { padding: 28px 20px; }
     .m-project-name { font-size: 18px; }
-
+    
     .m-nav a { padding: 12px 12px; font-size: 10px; }
     .m-footer { padding: 24px 16px 72px; }
 
@@ -1962,7 +1969,7 @@
       </div>
       <div class="m-hero-bio-col">
         <div class="m-hero-bio">
-          <strong>24-year-old AI engineer</strong> with an MSc from VU Amsterdam. I build production-grade AI systems, from spatiotemporal transformers predicting climate disasters to GenAI pipelines shipping real products. I'm also passionate about AI Safety and making intelligent systems that actually work.
+          <strong>Hey there!</strong> I'm a 24-year-old <strong>AI engineer</strong> with an MSc from VU Amsterdam. I build production-grade AI systems, from spatiotemporal transformers predicting climate disasters to GenAI pipelines. I'm also passionate about AI Safety, design, and philosophy.
         </div>
       </div>
     </div>
@@ -2003,6 +2010,7 @@
             <li>Implemented a spatiotemporal transformer (Earthformer) to predict extreme events affecting globally significant food production regions, achieving 71% validation accuracy on a novel forecasting task.</li>
             <li>Developed a reproducible, modular codebase with separate data/model/training modules, comprehensive documentation, and environment management, published as an open-source repository on GitHub.</li>
             <li>Executed large-scale model training on an SSH computing cluster using SLURM job scheduling, managing resource allocation and parallel experimentation across multiple GPU nodes.</li>
+            <li>Accepted for poster presentation at <a href="https://nwonac.nl/">NWO Netherlands Annual Congress (NAC) 2026</a>.</li>
           </ul>
           <div class="m-tl-stack">Python · PyTorch · NumPy · dask · Earthformer · scikit-learn · matplotlib · xarray · Git</div>
         </div>
@@ -2031,7 +2039,7 @@
             <li>Led a team of 5 building AI agents integrating the Bondfish API for natural-language access to bond and issuer data.</li>
             <li>Implemented responsible AI guardrails against prompt injection; evaluated with a custom 50+ query benchmark.</li>
           </ul>
-          <div class="m-tl-stack">Python · ChromaDB · PydanticAI · LangChain · PostgreSQL · Langgraph</div>
+          <div class="m-tl-stack">Python · ChromaDB · PydanticAI · LangChain · PostgreSQL · LangGraph</div>
         </div>
       </div>
       <div class="m-tl-item">
@@ -2075,7 +2083,7 @@
         <h3 class="m-project-name">Weather-Driven Crop Failure Prediction</h3>
         <p class="m-project-desc">MSc graduation thesis at VU Institute for Environmental Sciences. Engineered a custom data pipeline extracting extreme weather signals linked to quasi-stationary Rossby waves from the LENTIS climate dataset — producing 9,200 labelled daily samples. Implemented an Earthformer spatiotemporal transformer achieving 71% validation accuracy on a novel forecasting task.</p>
         <div class="m-project-stack">Python · PyTorch · Earthformer · dask · xarray · scikit-learn · SLURM</div>
-        <a href="https://github.com/markmitrani/" class="m-project-link" style="margin-top:12px;">GitHub</a>
+        <a href="https://github.com/markmitrani/concurrent-heatwave-prediction" class="m-project-link" style="margin-top:12px;">GitHub</a>
       </div>
       <div class="m-project-card">
         <span class="m-project-year">2025–26</span>
@@ -2089,7 +2097,7 @@
         <span class="m-project-tag">AI Agents · NLP · Client</span>
         <h3 class="m-project-name">Bondfish AI Customer Service Agent</h3>
         <p class="m-project-desc">Led a team of 5 building AI agents integrating the Bondfish API to answer customer queries and provide natural-language access to bond and issuer data. Implemented responsible AI guardrails and evaluated reliability with a custom 50+ query benchmark.</p>
-        <div class="m-project-stack">Python · ChromaDB · PydanticAI · LangChain · PostgreSQL · Langgraph</div>
+        <div class="m-project-stack">Python · ChromaDB · PydanticAI · LangChain · PostgreSQL · LangGraph</div>
       </div>
       <div class="m-project-card">
         <span class="m-project-year">2025</span>
